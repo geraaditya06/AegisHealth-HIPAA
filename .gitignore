@@ -1,0 +1,83 @@
+# ──────────────────────────────────────────────────────────────────────────
+# AegisHealth — .gitignore
+# FastAPI (Python) backend + React (Vite) frontend + SQLite
+# NOTE: .env.example files ARE committed (only real .env files are ignored).
+# ──────────────────────────────────────────────────────────────────────────
+
+# ── Secrets / environment ──────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+*.pem
+*.key
+
+# ── Python ─────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+backend/venv/
+backend/.venv/
+# Test / type / lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# ── Databases (SQLite + WAL/SHM/journal) ────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+*.db-journal
+backend/aegishealth.db
+backend/_test_aegis.db
+backend/tests/_test_aegis.db*
+
+# ── Generated artifacts ─────────────────────────────────────────────────────
+# Scan/compliance PDF reports are generated at runtime.
+backend/reports/
+# Stray pgAdmin / Postgres connection artifacts.
+backend/postgresql_/
+# Local run logs / pids
+.run/
+*.log
+*.pid
+
+# ── Node / Vite (frontend) ──────────────────────────────────────────────────
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+.vite/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── OS files ────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ── Editor / IDE ────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
