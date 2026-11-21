@@ -57,3 +57,14 @@ To start both frontend and backend without Docker:
 
 ## API Docs
 Once the backend is running, visit: `http://localhost:8000/docs`
+
+## Assessment Workflow
+
+1. Submit a healthcare website URL for assessment.
+2. Run automated checks against technical safeguards.
+3. Review findings categorized by severity.
+4. Receive a compliance score and recommendations for improvement.
+5. Use the assessment result as a deployment gate.
+6. Maintain audit records of scans and deployment decisions.
+
+> AegisHealth is an automated assessment tool and does not replace a formal HIPAA compliance audit or legal review.
